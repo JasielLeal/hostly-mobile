@@ -1,8 +1,10 @@
 import { StatusBar } from 'expo-status-bar';
-import { Image, Text, View } from 'react-native';
+import { Image, Text, TouchableOpacity, View } from 'react-native';
 import Input from '../../../components/input';
 import Button from '../../../components/button';
 import { useSignInForm } from './hooks/useSignInForm';
+import { NavigationProp, useNavigation } from '@react-navigation/native';
+import { RootStackParamList } from '../../../types/navigation';
 
 export function SingIn() {
 
@@ -15,8 +17,9 @@ export function SingIn() {
 
     async function onLogin(data: SignInFormData) {
         console.log(data)
-
     }
+    
+    const navigate = useNavigation<NavigationProp<RootStackParamList>>();
 
     return (
         <>
@@ -29,7 +32,7 @@ export function SingIn() {
                 </Text>
                 <StatusBar style="light" />
             </View>
-            <View className='px-7 bg-white  rounded-t-3xl -mt-10 pt-10'>
+            <View className='px-7 bg-white  rounded-t-3xl -mt-10 pt-10 h-full'>
                 <Text className='text-textBlack font-semibold text-2xl mt-10'>
                     Realizar login
                 </Text>
@@ -61,13 +64,15 @@ export function SingIn() {
                     Esqueceu a senha?
                 </Text>
 
-                <View>
-                    <Text className='text-center mt-5 text-sm'>
+                <View className='flex flex-row mt-5 justify-center items-center'>
+                    <Text className='text-sm'>
                         Não tem uma conta?{' '}
+                    </Text>
+                    <TouchableOpacity onPress={() => navigate.navigate('SignUp')}>
                         <Text className='text-primary font-semibold'>
                             Cadastre-se
                         </Text>
-                    </Text>
+                    </TouchableOpacity>
                 </View>
 
             </View>

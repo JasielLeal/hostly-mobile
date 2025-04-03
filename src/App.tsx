@@ -1,13 +1,16 @@
+import { NavigationContainer } from "@react-navigation/native";
 import "../global.css"
-import Register from './pages/auth/register/Register';
+import { Routes } from "./routes/Layout";
 
 export default function App() {
 
-
   return (
-   <>
-      <Register/>
-   </>
+    <>
+      <NavigationContainer>
+        <Routes />
+      </NavigationContainer>
+
+    </>
   );
 }
 

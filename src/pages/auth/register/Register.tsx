@@ -1,8 +1,10 @@
 import { StatusBar } from "expo-status-bar";
 import { Image, Text, TouchableOpacity, View } from "react-native";
+
 import Input from "../../../components/input";
 import { useRegisterInForm } from "./hooks/useRegisterInForm";
 import Button from "../../../components/button";
+
 import RadioButton from "../../../components/radioButton";
 import { openTermsOfService } from "./services/OpenTermsOfService";
 

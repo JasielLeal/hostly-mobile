@@ -9,12 +9,15 @@
     "web": "expo start --web"
   },
   "dependencies": {
+    "@clerk/clerk-expo": "^2.9.6",
     "@hookform/resolvers": "^5.0.1",
+    "@react-navigation/native": "^7.1.4",
+    "@react-navigation/stack": "^7.2.8",
     "expo": "~52.0.42",
     "expo-font": "^13.0.4",
     "expo-status-bar": "~2.0.1",
     "nativewind": "^4.1.23",
-    "react": "18.3.1",
+    "react": "18.2.0",
     "react-hook-form": "^7.55.0",
     "react-native": "0.76.8",
     "react-native-reanimated": "^3.16.2",
@@ -25,6 +28,7 @@
   "devDependencies": {
     "@babel/core": "^7.25.2",
     "@types/react": "~18.3.12",
+    "react-dom": "^18.2.0",
     "typescript": "^5.3.3"
   },
   "private": true

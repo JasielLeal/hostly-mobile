@@ -6,7 +6,7 @@ import { useForm } from "react-hook-form";
 export const useSignInForm = () => {
     
     type SignInFormData = {
-        email: string;
+        email?: string;
         password?: string;
     };
     
